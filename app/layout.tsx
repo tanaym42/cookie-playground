@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cookie playground',
     description: 'Developer, writer, and creator.',
-    url: '',
+    url: 'https://cookiebeebee.top/',
     siteName: 'Cookie playground',
     locale: 'en_US',
     type: 'website',
