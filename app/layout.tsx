@@ -8,7 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SandpackCSS } from './blog/[slug]/sandpack';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(''),
+  metadataBase: new URL('https://leerob.io'),
   title: {
     default: 'Cookie Playground',
     template: '%s | Lee Robinson',
