@@ -61,7 +61,7 @@ export default function RootLayout({
     >
       <head>
 
-      <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="0190e591-2d31-79cf-aa8c-8bf84f9788a9-test" ></script>
+      <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charSet="UTF-8" data-domain-script="0190e591-2d31-79cf-aa8c-8bf84f9788a9-test" ></script>
       <script type="text/javascript">
       function OptanonWrapper() { }
       </script>
