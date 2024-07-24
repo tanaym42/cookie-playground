@@ -60,12 +60,12 @@ export default function RootLayout({
       )}
     >
       <head>
-      <!-- OneTrust Cookies Consent Notice start for cookiebeebee.top -->
+
       <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="0190e591-2d31-79cf-aa8c-8bf84f9788a9-test" ></script>
       <script type="text/javascript">
       function OptanonWrapper() { }
       </script>
-      <!-- OneTrust Cookies Consent Notice end for cookiebeebee.top -->
+
         <SandpackCSS />
       </head>
       <body className="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
