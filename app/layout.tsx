@@ -60,14 +60,16 @@ export default function RootLayout({
       )}
     >
       <head>
+      <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';" />
+    
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charSet="UTF-8" data-domain-script="0190e591-2d31-79cf-aa8c-8bf84f9788a9-test"></script>
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
 
-      <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charSet="UTF-8" data-domain-script="0190e591-2d31-79cf-aa8c-8bf84f9788a9-test" ></script>
-      <script type="text/javascript">
-      function OptanonWrapper() { }
-      </script>
+    <SandpackCSS />
+</head>
 
-        <SandpackCSS />
-      </head>
       <body className="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
