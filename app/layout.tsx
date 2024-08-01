@@ -62,14 +62,6 @@ export default function RootLayout({
       <head>
       <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' https://cdn.cookielaw.org; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' https://cdn.cookielaw.org http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';"/>
       
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFP7T6EKG6"></script>
-      <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-TFP7T6EKG6');
-      </script>
     
       <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charSet="UTF-8" data-domain-script="0190e591-2d31-79cf-aa8c-8bf84f9788a9" ></script>
       <script type="text/javascript">
