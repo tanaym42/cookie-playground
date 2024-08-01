@@ -31,7 +31,7 @@ const workPage = `export default function Page() {
         This is where I put the video what privacy enhancements on! 
       </p>
 
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6KeYgoga9MA?si=w7jU6mQnR1TyzjAP" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6KeYgoga9MA?si=w7jU6mQnR1TyzjAP" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
     </section>
   );
 }
