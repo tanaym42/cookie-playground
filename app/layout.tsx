@@ -61,9 +61,6 @@ export default function RootLayout({
       )}
     >
     <head>
-
-      <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' https://cdn.cookielaw.org https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' https://cdn.cookielaw.org http://onlineerp.solution.quebec https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval';"/>
-
       
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TFP7T6EKG6" />
       <Script id="google-analytics">
