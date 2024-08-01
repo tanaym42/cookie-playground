@@ -48,7 +48,7 @@ const ContentSecurityPolicy = `
     media-src 'none';
     connect-src *;
     font-src 'self' data:;
-    frame-src 'self' *.codesandbox.io vercel.live;
+    frame-src 'self' *.codesandbox.io vercel.live https://www.youtube.com;
 `;
 
 const securityHeaders = [
