@@ -28,8 +28,10 @@ const workPage = `export default function Page() {
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">my work</h1>
       <p className="prose prose-neutral dark:prose-invert">
-        This is where your work experience goes.
+        This is where I put the video what privacy enhancements on! 
       </p>
+
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6KeYgoga9MA?si=w7jU6mQnR1TyzjAP" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullscreen></iframe>
     </section>
   );
 }
