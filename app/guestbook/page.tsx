@@ -12,49 +12,63 @@ export const metadata = {
 
 export default function GuestbookPage() {
   return (
-    <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
-        don't sign my guestbook
-      </h1>
-      <Suspense>
-        <GuestbookForm />
-        <GuestbookEntries />
-      </Suspense>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/4_9UbOxoNMM?si=MBlpMaxWMzpFxCzk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+    <>
+      <section>
+        <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+          don't sign my guestbook
+        </h1>
+        <Suspense>
+          <GuestbookForm />
+          <GuestbookEntries />
+        </Suspense>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/4_9UbOxoNMM?si=MBlpMaxWMzpFxCzk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+    
+      </section>
 
-      {/* Load OneTrust Privacy Notice script */}
-      <Script
-        src="https://privacyportal-uat-cdn.onetrust.com/privacy-notice-scripts/otnotice-1.0.min.js"
-        strategy="beforeInteractive"
-        id="otprivacy-notice-script"
-        data-settings='{"contentApiUrl":"https://privacyportal-uat-cdn.onetrust.com/privacy-notice-scripts/otnotice-1.0.min.js","metadataApiUrl":"https://privacyportal-uat-cdn.onetrust.com/privacy-notice-scripts/otnotice-1.0.min.js"}'
-      />
+      <section>
+      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+        Privacy Notice
+      </h1>
       
-      {/* Script to initialize OneTrust Privacy Notice */}
+      {/* Language Drop-down and Privacy Notice Container */}
+      <div className="ot-privacy-notice-language-dropdown-container"></div>
+      <div
+        id="otnotice-650d6e7d-98d2-445d-a08f-5715472a7f59"
+        className="otnotice"
+      ></div>
+
+      {/* Load the OneTrust Privacy Notice script */}
+      <Script 
+        src="https://privacyportal-uat-cdn.onetrust.com/privacy-notice-scripts/otnotice-1.0.min.js" 
+        strategy="beforeInteractive" 
+        id="otprivacy-notice-script"
+      />
+
+      {/* Initialize OneTrust Privacy Notice */}
       <Script
         id="initialize-privacy-notice"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
               if (window.OneTrust && window.OneTrust.NoticeApi) {
                 window.OneTrust.NoticeApi.Initialized.then(function() {
                   window.OneTrust.NoticeApi.LoadNotices([
-                    "https://privacyportal-uat-cdn.onetrust.com/storage-container/626cb470-8339-46fe-8f28-73343104d92e/privacy-notices/4e248a13-dba4-4e32-892b-ca3fdbddebe2/draft/privacynotice.json"
+                    "https://privacyportal-uat-cdn.onetrust.com/storage-container/626cb470-8339-46fe-8f28-73343104d92e/privacy-notices/650d6e7d-98d2-445d-a08f-5715472a7f59/draft/privacynotice.json"
                   ]);
+                }).catch((error) => {
+                  console.error('Error initializing OneTrust:', error);
                 });
+              } else {
+                console.error('OneTrust API is not available');
               }
             })();
           `,
         }}
       />
-      
-      {/* Language Drop-down and Privacy Notice container */}
-      <div className="ot-privacy-notice-language-dropdown-container"></div>
-      <div
-        id="otnotice-4e248a13-dba4-4e32-892b-ca3fdbddebe2"
-        className="otnotice"
-      ></div>
     </section>
+    
+    </>
     
   );
 }
