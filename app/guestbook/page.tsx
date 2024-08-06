@@ -3,6 +3,7 @@ import { getGuestbookEntries } from 'app/db/queries';
 import { SignIn, SignOut } from './buttons';
 import { Suspense } from 'react';
 import Form from './form';
+import Script from 'next/script'
 
 export const metadata = {
   title: 'Guestbook',
@@ -20,7 +21,41 @@ export default function GuestbookPage() {
         <GuestbookEntries />
       </Suspense>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/4_9UbOxoNMM?si=MBlpMaxWMzpFxCzk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
+      {/* Load OneTrust Privacy Notice script */}
+      <Script
+        src="https://privacyportal-uat-cdn.onetrust.com/privacy-notice-scripts/otnotice-1.0.min.js"
+        strategy="beforeInteractive"
+        id="otprivacy-notice-script"
+        data-settings='{"contentApiUrl":"https://privacyportal-uat-cdn.onetrust.com/privacy-notice-scripts/otnotice-1.0.min.js","metadataApiUrl":"https://privacyportal-uat-cdn.onetrust.com/privacy-notice-scripts/otnotice-1.0.min.js"}'
+      />
+      
+      {/* Script to initialize OneTrust Privacy Notice */}
+      <Script
+        id="initialize-privacy-notice"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              if (window.OneTrust && window.OneTrust.NoticeApi) {
+                window.OneTrust.NoticeApi.Initialized.then(function() {
+                  window.OneTrust.NoticeApi.LoadNotices([
+                    "https://privacyportal-uat-cdn.onetrust.com/storage-container/626cb470-8339-46fe-8f28-73343104d92e/privacy-notices/4e248a13-dba4-4e32-892b-ca3fdbddebe2/draft/privacynotice.json"
+                  ]);
+                });
+              }
+            })();
+          `,
+        }}
+      />
+      
+      {/* Language Drop-down and Privacy Notice container */}
+      <div className="ot-privacy-notice-language-dropdown-container"></div>
+      <div
+        id="otnotice-4e248a13-dba4-4e32-892b-ca3fdbddebe2"
+        className="otnotice"
+      ></div>
     </section>
+    
   );
 }
 
