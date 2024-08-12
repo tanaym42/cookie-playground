@@ -7,6 +7,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SandpackCSS } from './blog/[slug]/sandpack';
 import Script from 'next/script'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://leerob.io'),
@@ -61,6 +63,8 @@ export default function RootLayout({
       )}
     >
     <head>
+
+   
       
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TFP7T6EKG6" />
       <Script id="google-analytics">
@@ -92,6 +96,7 @@ export default function RootLayout({
           <SpeedInsights />
         </main>
       </body>
+      <GoogleAnalytics gaId="G-TFP7T6EKG6" />
     </html>
   );
 }
