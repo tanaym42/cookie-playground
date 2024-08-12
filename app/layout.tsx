@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SandpackCSS } from './blog/[slug]/sandpack';
 import Script from 'next/script'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 
 export const metadata: Metadata = {
@@ -64,9 +64,11 @@ export default function RootLayout({
     >
     <head>
 
+    <GoogleTagManager gtmId="GTM-PQV9QV44"/>
+
    
       
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TFP7T6EKG6" />
+      {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TFP7T6EKG6" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -75,7 +77,7 @@ export default function RootLayout({
 
           gtag('config', 'G-TFP7T6EKG6');
         `}  
-      </Script>
+      </Script> */}
 
     
       <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charSet="UTF-8" data-domain-script="0190e591-2d31-79cf-aa8c-8bf84f9788a9" ></script>
@@ -87,6 +89,9 @@ export default function RootLayout({
     </head>
 
       <body className="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
+
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQV9QV44"
+      height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
 
 
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
