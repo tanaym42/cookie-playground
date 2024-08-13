@@ -43,6 +43,7 @@ const nextConfig = {
 const ContentSecurityPolicy = `
     default-src 'self' vercel.live;
     script-src 'self' https://www.googletagmanager.com/ https://*.googletagmanager.com https://tagmanager.google.com 'unsafe-eval' 'unsafe-inline' * https://privacyportal-uat-cdn.onetrust.com www.googletagmanager.com/ https://www.googletagmanager.com/ https://*.googletagmanager.com https://tagmanager.google.com cdn.cookielaw.org cdn.vercel-insights.com vercel.live va.vercel-scripts.com;
+    script-src-elem 'self' https://www.googletagmanager.com;
     style-src 'self' 'unsafe-inline';
     img-src * https://www.googletagmanager.com blob: data:;
     media-src 'none';
